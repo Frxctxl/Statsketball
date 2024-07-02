@@ -4,12 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Statsketball</title>
+  
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css"
+>
   <link href="css/style.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="is-flex-direction-column p-5">
+  <header class="p-5">
+    <h1 class="is-size-1 has-text-centered">Statsketball</h1>
+  </header>
+
+  <div id="search-btn" class="p-5 mt-6 has-text-centered"> 
+    <button class="button is-large  modalOn">
+      Search NBA Players
+    </button> 
+
+  </div>
+  
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p>Input Player Name</p>
+      </header>
+      <section class="modal-card-body">
+        <p>NBA player</p>
+        <!-- Your content -->
+         <form>
+          <input type="text" id="playerName" placeholder="Input Player's Name" required>
+          <button class="button" id="userSubmit">Submit</button>
+         </form>
+      </section>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  
+  
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
 
 </body>
+
+
 
 </html>
