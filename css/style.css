@@ -1,3 +1,25 @@
-* {
+/* Resets */
+
+html, body {
   height: 100%;
+}
+
+
+:root {
+  --primary-color: #125E8A;
+  --secondary-color: #C5283D; 
+}
+
+/* Global Styles */
+
+* {
+  background-color: black;
+  color: var(--primary-color);
+}
+
+
+/* Custom Styles */
+
+#search-btn {
+  
 }
