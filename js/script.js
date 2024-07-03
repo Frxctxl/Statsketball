@@ -16,7 +16,7 @@ function acceptInput(eventObj) {
     eventObj.preventDefault();
     const txt = $('#playerName').val();
     localStorage.setItem('players', txt);
-    window.location.href = '../stats.html'
+    window.location.href = './stats.html'
 }
 
 // $('.modal-card').on('click', function (e) {
