@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wdth,wght@0,87.5,700;1,87.5,700&display=swap"
         rel="stylesheet">
 
-
+    <!-- Font for Body - "Anton SC" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
 
     <!-- CSS Links -->
 
@@ -20,31 +23,31 @@
 
     <link href="css/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="./css/stats.css">
+
 </head>
 
 <body>
 
     <header class="p-5">
+        <a href="index.html" class="button is-primary custom-button modalOn mt-3" id="back-button">Back</a>
         <h1 id="banner" class="has-text-centered">Statsketball</h1>
-        <a href="index.html" class="button is-danger">Back</a>
     </header>
 
     <div class="background-image"></div>
 
 
-    <main class="columns is-justify-content-space-around">
-        <section id="search-results" class="column is-one-third px-6">
+    <main class="columns is-justify-content-space-around is-mobile is-one-third-mobile">
+        <section id="search-results" class="column is-one-third">
+            <h4 class="title is-5">Search Results:</h4>
             <div id="players" class="is-flex is-flex-direction-column"></div>
         </section>
 
 
-        <section id="player-card" class="column is-one-third px-6">
-            <div class="card">
-                <!-- <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
-                    </figure>
-                </div> -->
+
+
+        <section id="player-card" class="column is-half">
+            <div class="card has-shadow">
                 <div class="card-content">
                     <div class="media">
                         <div class="media-left">
@@ -54,22 +57,28 @@
                             </figure>
                         </div>
                         <div class="media-content">
-                            <p class="title is-4">John Smith</p>
-                            <p class="subtitle is-6">@johnsmith</p>
+                            <p class="title is-4">Player's Name</p>
+                            <p id="player-position" class="subtitle is-6">team.full_name</p>
                         </div>
                     </div>
 
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                        iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-                        <a href="#">#responsive</a>
-                        <br />
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    <!-- bulma grid -->
+                    <div id="stats-grid" class="grid is-col-span-2">
+                        <div class="cell is-col-span-2">data.position</div>
+                        <div class="cell is-col-span-2">#23</div>
+                        <div class="cell">data.pts</div>
+                        <div class="cell">data.ast</div>
+                        <div class="cell">data.reb</div>
+                        <div class="cell">data.games_played</div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p class="has-text-centered">&copy; 2024 Statsketball. All Rights Reserved.
+    </footer>
 
     <!-- Script Files -->
 
