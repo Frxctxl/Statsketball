@@ -19,4 +19,10 @@ function displayPlayer(player){
 $('#players').append(`<div class="card">${player.first_name} ${player.last_name}</div>`)
 }
 
+function selectPlayer(card){
+    console.log(card.val())
+}
+
+$('.card').on('click', selectPlayer(eventObj))
+
 displayPlayer();
