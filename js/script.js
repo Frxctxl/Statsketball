@@ -3,18 +3,24 @@ $('.modal-close').on('click', closeModal);
 $('#userSubmit').on('click', acceptInput)
 
 
-function showModal(){
+function showModal(e) {
+    e.stopPropagation();
     $('.modal').addClass('is-active');
 }
 
-function closeModal(){
+function closeModal() {
     $('.modal').removeClass('is-active');
 }
 
-function acceptInput(eventObj){
+function acceptInput(eventObj) {
     eventObj.preventDefault();
     const txt = $('#playerName').val();
     localStorage.setItem('players', txt);
     window.location.href = '../stats.html'
 }
 
+// $('.modal-card').on('click', function (e) {
+//     e.stopPropagation();
+// });
+
+$('.modal-background').on('click', closeModal);
