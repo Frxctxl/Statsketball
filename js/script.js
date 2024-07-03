@@ -3,12 +3,13 @@ $('.modal-close').on('click', closeModal);
 $('#userSubmit').on('click', acceptInput)
 
 
-function showModal(){
-    $('.modal').addClass('is-active');
+function showModal(e) {
+  e.stopPropagation();
+  $('.modal').addClass('is-active');
 }
 
-function closeModal(){
-    $('.modal').removeClass('is-active');
+function closeModal() {
+  $('.modal').removeClass('is-active');
 }
 
 function acceptInput(eventObj){
@@ -25,5 +26,4 @@ function acceptInput(eventObj){
       });
     
 }
-
-
+$('.modal-background').on('click', closeModal);
