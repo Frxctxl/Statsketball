@@ -13,13 +13,14 @@ $.get({
         //     displayPlayer(player)
         // }
         data.data.forEach((element) => displayPlayer(element));
+
+$('#players').on('click', 'button', selectPlayer);
     })
 
 function displayPlayer(player) {
-    console.log(player)
-    $('#players').append(`
-        <button class="button mb-2" data-id="${player.id}">${player.first_name} ${player.last_name}</button>
-    `)
+    $('#players').append(`<button class="button player mb-2">${player.first_name} ${player.last_name}</button>`)
 }
 
-// displayPlayer();
+function selectPlayer(card) {
+    console.log(card.target)
+}
