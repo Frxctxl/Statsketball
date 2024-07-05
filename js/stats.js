@@ -14,7 +14,7 @@ $.get({
         // }
         data.data.forEach((element) => displayPlayer(element));
 
-$('#players').on('click', 'button', selectPlayer);
+        $('#players').on('click', 'button', selectPlayer);
     })
 
 function displayPlayer(player) {
@@ -33,4 +33,6 @@ function selectPlayer(card) {
     .then(function(data){
         console.log(data);
     })
+}
+    $('#hiddenElement').css('display', 'block');
 }
