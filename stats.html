@@ -43,36 +43,34 @@
             <div id="players" class="is-flex is-flex-direction-column"></div>
         </section>
 
-        <div id="hiddenElement" class="is-hidden" ;>
-            <section id="player-card" class="column is-half">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img src="https://bulma.io/assets/images/placeholders/96x96.png"
-                                        alt="Placeholder image" />
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">Player's Name</p>
-                                <p id="player-position" class="subtitle is-6">team.full_name</p>
-                            </div>
+        <section id="player-card" class="column is-half is-hidden">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/assets/images/placeholders/96x96.png"
+                                    alt="Placeholder image" />
+                            </figure>
                         </div>
-
-                        <!-- bulma grid -->
-                        <div id="stats-grid" class="grid is-col-span-2">
-                            <div class="cell is-col-span-2">data.position</div>
-                            <div class="cell is-col-span-2">#23</div>
-                            <div class="cell">data.pts</div>
-                            <div class="cell">data.ast</div>
-                            <div class="cell">data.reb</div>
-                            <div class="cell">data.games_played</div>
+                        <div class="media-content">
+                            <p class="title is-4">Player's Name</p>
+                            <p id="player-position" class="subtitle is-6">team.full_name</p>
                         </div>
                     </div>
+
+                    <!-- bulma grid -->
+                    <div id="stats-grid" class="grid is-col-span-2">
+                        <div class="cell is-col-span-2">data.position</div>
+                        <div class="cell is-col-span-2">#23</div>
+                        <div class="cell">data.pts</div>
+                        <div class="cell">data.ast</div>
+                        <div class="cell">data.reb</div>
+                        <div class="cell">data.games_played</div>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer>

@@ -32,7 +32,7 @@ function selectPlayer(card) {
     })
         .then(function (data) {
             console.log(data);
-            $('#hiddenElement').css('display', 'block');
+            $('#player-card').removeClass('is-hidden');
         })
 }
 
