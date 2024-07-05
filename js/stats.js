@@ -27,12 +27,13 @@ function selectPlayer(card) {
         url: `https://api.balldontlie.io/v1/players/${playerId}`,
 
         headers: {
-           Authorization: '7289a625-7231-4111-b11a-1edc7f4412d2',
+            Authorization: '7289a625-7231-4111-b11a-1edc7f4412d2',
         }
     })
-    .then(function(data){
-        console.log(data);
-    })
+        .then(function (data) {
+            console.log(data);
+            $('#hiddenElement').css('display', 'block');
+        })
 }
-    $('#hiddenElement').css('display', 'block');
-}
+
+
