@@ -2,33 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statsketball</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statsketball</title>
 
-    <!-- Font Header - "Tourney" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wdth,wght@0,87.5,700;1,87.5,700&display=swap"
-        rel="stylesheet">
+  <!-- Font Header - "Tourney" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wdth,wght@0,87.5,700;1,87.5,700&display=swap"
+    rel="stylesheet">
 
-    <!-- Font for Body - "Anton SC" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+  <!-- Font for Body - "Anton SC" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
 
-    <!-- CSS Links -->
+  <!-- CSS Links -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
 
-    <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/stats.css">
+  <link rel="stylesheet" href="./css/stats.css">
 
 </head>
 
 <body>
-
     <header class="p-5">
         <a href="index.html" class="button is-primary custom-button modalOn mt-3" id="back-button">Back</a>
         <h1 id="banner" class="has-text-centered">Statsketball</h1>
@@ -99,15 +98,52 @@
         <p class="has-text-centered">&copy; 2024 Statsketball. All Rights Reserved.
     </footer>
 
-    <!-- Script Files -->
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <main class="columns is-justify-content-space-around is-mobile is-one-third-mobile">
+    <section id="search-results" class="column is-one-third">
+      <h4 class="title is-5">Search Results:</h4>
+      <div id="players" class="is-flex is-flex-direction-column"></div>
+    </section>
 
-    <script src="js/stats.js"></script>
+    <section id="player-card" class="column is-half is-hidden">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://bulma.io/assets/images/placeholders/96x96.png" alt="Placeholder image" id="teamImg" />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4" id="playerName">Player's Name</p>
+              <p id="teamName" class="subtitle is-6">team.full_name</p>
+            </div>
+          </div>
 
-    <script src="./js/standings.js"></script>
+          <!-- bulma grid -->
+          <div id="stats-grid" class="grid is-col-span-2">
+            <div class="cell is-col-span-2" id="playerPos"></div>
+            <div class="cell is-col-span-2" id="playerNum"></div>
+            <div class="cell" id="draftYear"></div>
+            <div class="cell" id="roundPick"></div>
+            <div class="cell" id="height"></div>
+            <div class="cell" id="weight"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <p class="has-text-centered">&copy; 2024 Statsketball. All Rights Reserved.
+  </footer>
+
+  <!-- Script Files -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+  <script src="js/stats.js"></script>
 </body>
 
 </html>
