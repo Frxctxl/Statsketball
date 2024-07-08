@@ -1,6 +1,6 @@
 $('.modalOn').on('click', showModal);
 $('.modal-close').on('click', closeModal);
-$('#userSubmit').on('click', acceptInput)
+$('#modalForm').on('submit', acceptInput)
 
 
 function showModal(e) {
