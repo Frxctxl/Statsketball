@@ -17,7 +17,7 @@ body {
 } */
 
 * {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   font-family: "Anton SC", sans-serif;
 }
 
@@ -49,7 +49,7 @@ body {
 
   background-size: cover;
   background-position: center;
-  color: white;
+  color: white !important;
   font-size: 24px;
   border: 2px solid white;
   box-shadow: -8px 8px 5px rgba(0, 0, 0, 0.2);
@@ -59,3 +59,14 @@ body {
   font-size: 22px;
   background-image: url('./images/bball-texture.jpg');
 }
+
+#about-us {
+  font-family: "Tourney",
+    sans-serif !important;
+}
+
+/* #page-footer {
+  position: relative;
+  bottom: 2px;
+  text-align: center;
+} */

@@ -31,3 +31,5 @@ $( document ).click(function() {
 });
 
 $('.modal-background').on('click', closeModal);
+
+
