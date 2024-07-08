@@ -26,4 +26,8 @@ function acceptInput(eventObj) {
   });
 }
 
+$( document ).click(function() {
+  $( "#banner" ).effect( "bounce", "slow" );
+});
+
 $('.modal-background').on('click', closeModal);
