@@ -2,7 +2,7 @@ const playerName = (localStorage.getItem('players'))
 const optionsContainer = document.querySelector('#players')
 
 $.get({
-  url: `https://api.balldontlie.io/v1/players?search=${playerName}`,
+  url: `https://api.balldontlie.io/v1/players?search=${playerName.split(' ')[0]}`,
 
   headers: {
     Authorization: '7289a625-7231-4111-b11a-1edc7f4412d2',
@@ -12,6 +12,7 @@ $.get({
     data.data.forEach((element) => displayPlayer(element));
 
     $('#players').on('click', 'button', selectPlayer);
+    
   })
 
 function displayPlayer(player) {
