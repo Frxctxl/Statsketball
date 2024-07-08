@@ -44,21 +44,21 @@
 
   <div id="modal" class="modal">
     <div class="modal-background"></div>
-    <div class="modal-card">
+    <form class="modal-card" id="modalForm">
       <header class="modal-card-head">
-        <p class="modal-card-title">Input Player Name</p>
+        <label class="modal-card-title">Input Player Name</label>
         <button class="modal-close is-large" aria-label="close"></button>
       </header>
-      <section class="modal-card-body">
-        <p class="modal-card-title">NBA player</p>
-        <input type="text" id="playerName" placeholder="Input Player's Name" required>
-      </section>
+      <div class="modal-card-body control">
+        <p class="modal-card-title label">NBA player</p>
+        <input type="text" id="playerName" placeholder="Input Player's Name" class="input" required>
+      </div>
       <footer class="modal-card-foot">
-        <div class="buttons">
+        <div class="buttons control">
           <button class="button" id="userSubmit">Submit</button>
         </div>
       </footer>
-    </div>
+    </form>
   </div>
 
   <footer>
