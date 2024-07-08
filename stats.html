@@ -28,13 +28,75 @@
 </head>
 
 <body>
+    <header class="p-5">
+        <a href="index.html" class="button is-primary custom-button modalOn mt-3" id="back-button">Back</a>
+        <h1 id="banner" class="has-text-centered">Statsketball</h1>
+    </header>
 
-  <header class="p-5">
-    <a href="index.html" class="button is-primary custom-button modalOn mt-3" id="back-button">Back</a>
-    <h1 id="banner" class="has-text-centered">Statsketball</h1>
-  </header>
+    <div class="background-image"></div>
 
-  <div class="background-image"></div>
+
+    <main class="columns is-justify-content-space-around is-mobile is-one-third-mobile">
+        <section id="search-results" class="column is-one-third">
+            <h4 class="title is-5">Search Results:</h4>
+            <div id="players" class="is-flex is-flex-direction-column"></div>
+        </section>
+
+        <section id="player-card" class="column is-half is-hidden">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://bulma.io/assets/images/placeholders/96x96.png"
+                                    alt="Placeholder image" />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Player's Name</p>
+                            <p id="player-position" class="subtitle is-6">team.full_name</p>
+                        </div>
+                    </div>
+
+                    <!-- bulma grid -->
+                    <div id="stats-grid" class="grid is-col-span-2">
+                        <div class="cell is-col-span-2">data.position</div>
+                        <div class="cell is-col-span-2">#23</div>
+                        <div class="cell">data.pts</div>
+                        <div class="cell">data.ast</div>
+                        <div class="cell">data.reb</div>
+                        <div class="cell">data.games_played</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <div id="output">
+
+            </div>
+
+        </section>
+    </main>
+
+    <article class="columns is-centered p-6 mx-6">
+        <!-- section for stadings board -->
+        <section class="column">
+            <h2 class="is-size-2 has-text-centered">NBA Standings 2023-2024 Season</h2>
+            <div id="wg-api-basketball-standings" data-host="v1.basketball.api-sports.io"
+                data-key="0f4632b1f7f96cb7bceeeb391b27f5b2" data-league="12" data-season="2023-2024" data-theme=""
+                data-show-errors="false" data-show-logos="true" class="wg_loader">
+            </div>
+            <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js">
+            </script>
+
+        </section>
+
+    </article>
+
+    <footer>
+        <p class="has-text-centered">&copy; 2024 Statsketball. All Rights Reserved.
+    </footer>
 
 
   <main class="columns is-justify-content-space-around is-mobile is-one-third-mobile">

@@ -26,6 +26,8 @@
 </head>
 
 <body class="is-flex-direction-column p-5">
+
+  <!-- Header -->
   <header class="p-5">
     <h1 id="banner" class="has-text-centered">Statsketball</h1>
   </header>
@@ -34,7 +36,7 @@
 
   <!-- Button -->
 
-  <div class="p-5 mt-6 has-text-centered">
+  <div class="p-5 mb-6 has-text-centered">
     <button id="search-btn" class="button is-primary custom-button modalOn p-5 ">Search NBA Players</button>
   </div>
 
@@ -59,6 +61,18 @@
     </div>
   </div>
 
+  <!-- section for stadings board -->
+  <section>
+    <h2 class="is-size-2 has-text-centered">NBA Standings 2023-2024 Season</h2>
+    <div id="wg-api-basketball-standings" data-host="v1.basketball.api-sports.io"
+      data-key="0f4632b1f7f96cb7bceeeb391b27f5b2" data-league="12" data-season="2023-2024" data-theme=""
+      data-show-errors="false" data-show-logos="true" class="wg_loader">
+    </div>
+    <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js">
+    </script>
+
+  </section>
+
   <footer>
     <p class="has-text-centered">&copy; 2024 Statsketball. All Rights Reserved.
   </footer>
@@ -72,8 +86,6 @@
   <script src="./js/stats.js"></script>
 
   <script src="js/script.js"></script>
-
-
 
 </body>
 
