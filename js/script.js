@@ -27,3 +27,5 @@ function acceptInput(eventObj) {
 }
 
 $('.modal-background').on('click', closeModal);
+
+
