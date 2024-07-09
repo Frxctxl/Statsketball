@@ -31,7 +31,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url('./images/court-background-4.png');
-  opacity: .4;
+  /* opacity: .4; */
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
