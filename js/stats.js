@@ -2,7 +2,11 @@ const playerName = (localStorage.getItem('players'))
 const optionsContainer = document.querySelector('#players')
 
 $.get({
-    url: `https://api.balldontlie.io/v1/players?search=${playerName.split(' ')[0]}`,
+<<<<<<<< < Temporary merge branch 1
+  url: `https://api.balldontlie.io/v1/players?search=${playerName.split(' ')[0]}`,
+=========
+    url: `https://api.balldontlie.io/v1/players?search=${playerName}`,
+>>>>>>>>> Temporary merge branch 2
 
     headers: {
         Authorization: '7289a625-7231-4111-b11a-1edc7f4412d2',
@@ -14,6 +18,7 @@ $.get({
         $('#players').on('click', 'button', selectPlayer);
 
     })
+>>>>>>>>> Temporary merge branch 2
 
 function displayPlayer(player) {
     $('#players').append(`<button class="button player mb-2" id="${player.id}">${player.first_name} ${player.last_name}</button>`)
